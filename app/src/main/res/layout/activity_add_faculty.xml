@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.shruti.moodleapp.AddFaculty">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Your Branch" />
+
+            <Spinner
+                android:id="@+id/spn_branch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_fname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="First Name"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_lname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Last Name"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_dob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                android:textSize="18dp"
+                android:hint="Date of Birth"
+                android:focusable="True"/>
+
+            <EditText
+                android:id="@+id/edit_contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Contact"
+                android:inputType="phone"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email_Id"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Address"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_joindate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                android:textSize="18dp"
+                android:hint="Joining Date"
+                android:focusable="True"/>
+
+                <Button
+                    android:id="@+id/buttonADD"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/colorPrimary"
+                    android:text="ADD"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+</RelativeLayout>

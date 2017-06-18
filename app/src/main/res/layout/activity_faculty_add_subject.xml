@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shruti.moodleapp.FacultyAddSubject">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/background_light"
+        android:id="@+id/relativeLayout">
+
+        <ImageButton
+            android:id="@+id/iv_year"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/background_light"
+            android:src="@drawable/ic_label_outline" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_year"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/iv_year"
+            android:text="Year"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/spn_year"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/iv_year"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:scrollbarAlwaysDrawVerticalTrack="?android:attr/windowFullscreen"
+            android:scrollbarStyle="outsideOverlay" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="30dp"
+        android:background="@color/cardview_light_background">
+
+        <ImageButton
+            android:id="@+id/iv_subject"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/background_light"
+            android:src="@drawable/ic_school" />
+
+
+        <TextView
+            android:id="@+id/tv_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/iv_subject"
+            android:text="Subject Details"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/tv_subname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/tv_sub"
+            android:layout_marginTop="50dp"
+            android:text="Subject Name" />
+
+        <EditText
+            android:id="@+id/et_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_subname"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="sub" />
+
+        <TextView
+            android:id="@+id/tv_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Department"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/et_subject"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/et_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_department"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Dep" />
+
+
+    </RelativeLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        android:src="@drawable/ic_save"
+        />
+
+</RelativeLayout>
