@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shruti.moodleapp.FacultyAddSubject">
+    tools:context="com.shruti.moodleapp.ClassAdd">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:layout_alignBottom="@+id/iv_year"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/iv_year"
-            android:text="Year"
+            android:text="Admission Year"
             android:textSize="30sp" />
 
         <Spinner
@@ -39,6 +39,7 @@
             android:layout_below="@+id/iv_year"
             android:layout_marginTop="8dp"
             android:textAlignment="center"
+            android:entries="@array/years"
             android:scrollbarAlwaysDrawVerticalTrack="?android:attr/windowFullscreen"
             android:scrollbarStyle="outsideOverlay" />
 
@@ -47,11 +48,11 @@
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="235dp"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
+        android:background="@color/cardview_light_background"
         android:layout_below="@+id/relativeLayout"
-        android:layout_marginTop="30dp"
-        android:background="@color/cardview_light_background">
+        >
 
         <ImageButton
             android:id="@+id/iv_subject"
@@ -92,7 +93,7 @@
             android:text="sub" />
 
         <TextView
-            android:id="@+id/tv_department"
+            android:id="@+id/tv_branch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Department"
@@ -100,19 +101,50 @@
             android:layout_below="@+id/et_subject"
             android:layout_alignParentStart="true" />
 
-        <EditText
-            android:id="@+id/et_department"
+        <Spinner
+            android:id="@+id/spn_branch"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_branch"
+            android:entries="@array/branches"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:spinnerMode="dropdown"
+            android:scrollHorizontally="true"
+            android:scrollbarAlwaysDrawVerticalTrack="?android:attr/windowFullscreen"
+            android:scrollbarStyle="outsideOverlay" />
+
+
+        <TextView
+            android:id="@+id/tv_sem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Semister"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/spn_branch"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spn_sem"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/tv_department"
-            android:layout_marginTop="17dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Dep" />
+            android:layout_below="@+id/tv_sem"
+            android:entries="@array/semesters"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:spinnerMode="dropdown"
+            android:scrollHorizontally="true"
+            android:scrollbarAlwaysDrawVerticalTrack="?android:attr/windowFullscreen"
+            android:scrollbarStyle="outsideOverlay" />
+
 
 
     </RelativeLayout>
+
+
+
 
 
 

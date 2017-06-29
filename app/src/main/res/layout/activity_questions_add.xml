@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jayesh.moodleapp.Questions_add">
+
+
+    <EditText
+        android:id="@+id/et_add_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="Question"
+        android:maxLines="10"
+        android:text="question " />
+    <EditText
+        android:id="@+id/et_add_A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp"/>
+    <EditText
+        android:id="@+id/et_add_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp"/>
+    <EditText
+        android:id="@+id/et_add_C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp"/>
+    <EditText
+        android:id="@+id/et_add_D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Select Answer :"/>
+    <Spinner
+        android:id="@+id/spn_add_ans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:entries="@array/options">
+    </Spinner>
+
+    <Button
+        android:id="@+id/btn_addque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="ADD" />
+</LinearLayout>

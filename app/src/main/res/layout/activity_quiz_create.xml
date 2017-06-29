@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayesh.moodleapp.Quiz_create">
+
+    <EditText
+        android:id="@+id/et_quizname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spn_branch"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/spn_branch"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Quiz Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_quizname"
+        android:layout_alignStart="@+id/et_quizname"
+        android:layout_below="@+id/et_quizname"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Subject Name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tv_btanch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_subject"
+        android:layout_below="@+id/et_subject"
+        android:layout_marginTop="37dp"
+        android:text="Select Branch" />
+
+    <Spinner
+        android:id="@+id/spn_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_btanch"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:entries="@array/branches"/>
+
+    <TextView
+        android:id="@+id/tv_sem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spn_branch"
+        android:layout_below="@+id/spn_branch"
+        android:layout_marginTop="39dp"
+        android:text="Select Semester" />
+
+    <Spinner
+        android:id="@+id/spn_sem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sem"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:entries="@array/semesters"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spn_sem"
+        android:layout_below="@+id/spn_sem"
+        android:layout_marginTop="61dp"
+        android:text="CANCEL" />
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spn_sem"
+        android:layout_alignTop="@+id/btn_cancel"
+        android:text="CREATE" />
+</RelativeLayout>

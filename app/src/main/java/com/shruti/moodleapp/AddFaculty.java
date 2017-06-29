@@ -40,7 +40,7 @@ public class AddFaculty extends AppCompatActivity {
         buttonADD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                register_faculty(v);
+                    register_faculty(v);
             }
         });
 

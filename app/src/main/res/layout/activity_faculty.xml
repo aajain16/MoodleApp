@@ -1,29 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shruti.moodleapp.Faculty"
-    android:background="@color/colorPrimaryDark">
+    tools:context="com.shruti.moodleapp.Faculty">
 
-    <RelativeLayout
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@android:color/background_light">
+        android:orientation="vertical">
 
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
 
-    <TextView
-        android:id="@+id/tv_attendence"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
-        android:padding="5dp"
-        android:text="ATTENDENCE"
-        android:textSize="30sp"
-        tools:textStyle="bold|italic" />
+            <TextView
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ATTENDENCE MANAGEMENT"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
 
-</RelativeLayout>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="TAKE ATTENDENCE"
+                android:layout_gravity="center"
+                android:id="@+id/attendence_take">
+            </Button>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="EDIT ATTENDENCE"
+                android:layout_gravity="center"
+                android:id="@+id/attendence_edit">
+            </Button>
+
+        </LinearLayout>
+
+        <View style="@style/Divider"
+            android:id="@+id/line1"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QUIZ MANAGEMENT"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="CREATE NEW"
+                android:layout_gravity="center"
+                android:id="@+id/quiz_new">
+            </Button>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="EDIT QUIZ"
+                android:layout_gravity="center"
+                android:id="@+id/quiz_edit">
+            </Button>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="RUN QUIZ"
+                android:layout_gravity="center"
+                android:id="@+id/quiz_run">
+            </Button>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="UPLOAD QUIZ"
+                android:layout_gravity="center"
+                android:id="@+id/quiz_upload">
+            </Button>
+
+        </LinearLayout>
+
+        <View style="@style/Divider"
+            android:id="@+id/line2"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/et3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STUDY MATERIAL MANAGEMENT"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="UPLOAD MATERIAL"
+                android:layout_gravity="center"
+                android:id="@+id/material_upload">
+            </Button>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="REMOVE MATERIAL"
+                android:layout_gravity="center"
+                android:id="@+id/material_remove">
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.shruti.moodleapp.Faculty"-->
+    <!--android:background="@color/colorPrimaryDark">-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:background="@android:color/background_light">-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_attendence"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="66dp"-->
+        <!--android:padding="5dp"-->
+        <!--android:text="ATTENDENCE"-->
+        <!--android:textSize="30sp"-->
+        <!--tools:textStyle="bold|italic" />-->
+
+<!--</RelativeLayout>-->

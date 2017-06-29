@@ -2,6 +2,7 @@ package com.shruti.moodleapp;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.BufferedWriter;
@@ -126,11 +127,216 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
             }
         }
+        else if (method.equals("class_add"))
+        {
+            reg_url="http://192.168.43.167/cms/class_add.php";
+
+            String facultyid = params[1];
+            String subject = params[2];
+            String semester = params[3];
+            String branch = params[4];
+            String admyear = params[5];
+
+            try {
+                URL url=new URL(reg_url);
+                HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream os = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
+
+                String data= URLEncoder.encode("facultyid","UTF-8")+"="+URLEncoder.encode(facultyid,"UTF-8")+"&"+
+                        URLEncoder.encode("subject","UTF-8")+"="+URLEncoder.encode(subject,"UTF-8")+"&"+
+                        URLEncoder.encode("semester","UTF-8")+"="+URLEncoder.encode(semester,"UTF-8")+"&"+
+                        URLEncoder.encode("branch","UTF-8")+"="+URLEncoder.encode(branch,"UTF-8")+"&"+
+                        URLEncoder.encode("admyear","UTF-8")+"="+URLEncoder.encode(admyear,"UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                os.close();
+                InputStream IS=httpURLConnection.getInputStream();
+                IS.close();
+                return "Class Added succesfully";
+
+
+            }
+            catch (MalformedURLException e){
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if(method.equals("quiz_create"))
+        {
+            reg_url="http://192.168.43.167/cms/quiz_create.php";
+
+            String quizname = params[1].replace(" ","_");
+            String facultyid =params[2];
+            String branch = params[3];
+            String sem = params[4];
+            String sub = params[5];
+            String status = params[6];
+
+            try {
+                URL url=new URL(reg_url);
+                HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream os = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
+
+                String data= URLEncoder.encode("quizname","UTF-8")+"="+URLEncoder.encode(quizname,"UTF-8")+"&"+
+                        URLEncoder.encode("facultyid","UTF-8")+"="+URLEncoder.encode(facultyid,"UTF-8")+"&"+
+                        URLEncoder.encode("branch","UTF-8")+"="+URLEncoder.encode(branch,"UTF-8")+"&"+
+                        URLEncoder.encode("sem","UTF-8")+"="+URLEncoder.encode(sem,"UTF-8")+"&"+
+                        URLEncoder.encode("sub","UTF-8")+"="+URLEncoder.encode(sub,"UTF-8")+"&"+
+                        URLEncoder.encode("status","UTF-8")+"="+URLEncoder.encode(status,"UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                os.close();
+                InputStream IS=httpURLConnection.getInputStream();
+                IS.close();
+                return "Quiz Created Succesfully";
+
+
+            }
+            catch (MalformedURLException e){
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if(method.equals("question_add"))
+        {
+            reg_url="http://192.168.43.167/cms/question_add.php";
+
+            String question = params[1];
+            String a =params[2];
+            String b = params[3];
+            String c = params[4];
+            String d = params[5];
+            String ans = params[6];
+            String quizname = params[7];
+
+            try {
+                URL url=new URL(reg_url);
+                HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream os = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
+
+                String data= URLEncoder.encode("question","UTF-8")+"="+URLEncoder.encode(question,"UTF-8")+"&"+
+                        URLEncoder.encode("a","UTF-8")+"="+URLEncoder.encode(a,"UTF-8")+"&"+
+                        URLEncoder.encode("b","UTF-8")+"="+URLEncoder.encode(b,"UTF-8")+"&"+
+                        URLEncoder.encode("c","UTF-8")+"="+URLEncoder.encode(c,"UTF-8")+"&"+
+                        URLEncoder.encode("d","UTF-8")+"="+URLEncoder.encode(d,"UTF-8")+"&"+
+                        URLEncoder.encode("ans","UTF-8")+"="+URLEncoder.encode(ans,"UTF-8")+"&"+
+                        URLEncoder.encode("quizname","UTF-8")+"="+URLEncoder.encode(quizname,"UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                os.close();
+                InputStream IS=httpURLConnection.getInputStream();
+                IS.close();
+                return "Question Added Succesfully";
+
+
+            }
+            catch (MalformedURLException e){
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if(method.equals("question_edit"))
+        {
+            reg_url="http://192.168.43.167/cms/question_edit.php";
+
+            String question = params[1];
+            String a =params[2];
+            String b = params[3];
+            String c = params[4];
+            String d = params[5];
+            String ans = params[6];
+            String quizname = params[7];
+            String cond_que = params[8];
+
+            try {
+                URL url=new URL(reg_url);
+                HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream os = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
+
+                String data= URLEncoder.encode("question","UTF-8")+"="+URLEncoder.encode(question,"UTF-8")+"&"+
+                        URLEncoder.encode("a","UTF-8")+"="+URLEncoder.encode(a,"UTF-8")+"&"+
+                        URLEncoder.encode("b","UTF-8")+"="+URLEncoder.encode(b,"UTF-8")+"&"+
+                        URLEncoder.encode("c","UTF-8")+"="+URLEncoder.encode(c,"UTF-8")+"&"+
+                        URLEncoder.encode("d","UTF-8")+"="+URLEncoder.encode(d,"UTF-8")+"&"+
+                        URLEncoder.encode("ans","UTF-8")+"="+URLEncoder.encode(ans,"UTF-8")+"&"+
+                        URLEncoder.encode("quizname","UTF-8")+"="+URLEncoder.encode(quizname,"UTF-8")+"&"+
+                        URLEncoder.encode("cond_que","UTF-8")+"="+URLEncoder.encode(cond_que,"UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                os.close();
+                InputStream IS=httpURLConnection.getInputStream();
+                IS.close();
+                return "Question Updated Succesfully";
+
+
+            }
+            catch (MalformedURLException e){
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if(method.equals("question_delete"))
+        {
+            reg_url="http://192.168.43.167/cms/question_delete.php";
+
+            String quizname = params[1];
+            String cond_que = params[2];
+
+            try {
+                URL url=new URL(reg_url);
+                HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream os = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
+
+                String data= URLEncoder.encode("quizname","UTF-8")+"="+URLEncoder.encode(quizname,"UTF-8")+"&"+
+                        URLEncoder.encode("cond_que","UTF-8")+"="+URLEncoder.encode(cond_que,"UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                os.close();
+                InputStream IS=httpURLConnection.getInputStream();
+                IS.close();
+                return "Question Deleted Succesfully";
+
+            }
+            catch (MalformedURLException e){
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         return null;
     }
 
-    public BackgroundTask() {
+    public BackgroundTask(View.OnClickListener onClickListener) {
         super();
     }
 

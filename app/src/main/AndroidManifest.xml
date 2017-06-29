@@ -30,11 +30,17 @@
             android:name=".AddFaculty"
             android:label="@string/title_activity_add_faculty"
             android:parentActivityName=".AppBase" />
-        <activity android:name=".FacultyAttendenceSubDetail" />
+        <activity android:name=".ClassData" />
         <activity
             android:name=".Faculty"
             android:label="FACULTY" />
-        <activity android:name=".FacultyAddSubject"></activity>
+        <activity android:name=".ClassAdd" />
+        <activity android:name=".Attendence"></activity>
+        <activity android:name=".Questions_add" />
+        <activity android:name=".Questions_edit" />
+        <activity android:name=".Quiz_edit" />
+        <activity android:name=".Quiz_create" />
+        <activity android:name=".TestQuiz"></activity>
     </application>
 
 </manifest>

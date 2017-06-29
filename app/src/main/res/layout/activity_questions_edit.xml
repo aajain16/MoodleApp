@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jayesh.moodleapp.Questions_edit">
+
+    <EditText
+        android:id="@+id/et_edit_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Question"
+        android:maxLines="10"
+        android:layout_marginBottom="20dp"/>
+    <EditText
+        android:id="@+id/et_edit_A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp" />
+    <EditText
+        android:id="@+id/et_edit_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp" />
+    <EditText
+        android:id="@+id/et_edit_C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp" />
+    <EditText
+        android:id="@+id/et_edit_D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:maxLines="10"
+        android:layout_marginBottom="10dp" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Select Answer : "/>
+    <Spinner
+        android:id="@+id/spn_edit_ans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:entries="@array/options">
+    </Spinner>
+    <Button
+        android:id="@+id/btn_editque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="EDIT" />
+
+</LinearLayout>
+
+
+
+
+
+<!--<Spinner-->
+    <!--android:id="@+id/spn_edit_ans"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:entries="@array/options">-->
+<!--</Spinner>-->
+
+
+
+<!--</LinearLayout>-->
