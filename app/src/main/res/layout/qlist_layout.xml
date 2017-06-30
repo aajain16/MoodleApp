@@ -13,24 +13,28 @@
         android:layout_height="wrap_content"
         android:id="@+id/tv_A"
         android:text="---------------------------------------------------"
+        android:visibility="invisible"
         android:layout_below="@+id/tv_q"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_B"
         android:text="---------------------------------------------------"
+        android:visibility="invisible"
         android:layout_below="@+id/tv_A"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_C"
         android:text="---------------------------------------------------"
+        android:visibility="invisible"
         android:layout_below="@+id/tv_B"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_D"
         android:text="---------------------------------------------------"
+        android:visibility="invisible"
         android:layout_below="@+id/tv_C"/>
 
     <Button

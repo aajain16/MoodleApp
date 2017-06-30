@@ -1,5 +1,6 @@
 package com.shruti.moodleapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -43,7 +44,7 @@ public class Quiz_create extends AppCompatActivity implements View.OnClickListen
         if (view == btn_create)
         {
             String method="quiz_create";
-            BackgroundTask backgroundTask=new BackgroundTask((View.OnClickListener) this);
+            BackgroundTask backgroundTask=new BackgroundTask((Context) this);
             backgroundTask.execute(
                     method,
                     et_quizname.getText().toString(),

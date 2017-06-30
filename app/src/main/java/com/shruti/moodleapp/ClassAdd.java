@@ -36,11 +36,11 @@ public class ClassAdd extends AppCompatActivity{
                 String semester = spn_sem.getSelectedItem().toString();
                 String admyear = spn_admyear.getSelectedItem().toString();
                 String method="class_add";
-                BackgroundTask backgroundTask=new BackgroundTask(this);
+                BackgroundTask backgroundTask=new BackgroundTask(ClassAdd.this);
                 backgroundTask.execute(
                         method,
                         session.getid(),
-                        et_subject.getText().toString(),
+                        et_subject.getText().toString().replaceAll(" ","_"),
                         semester,
                         branch,
                         admyear);

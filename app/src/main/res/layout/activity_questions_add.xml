@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.jayesh.moodleapp.Questions_add">
+    tools:context="com.shruti.moodleapp.Questions_add">
 
 
     <EditText

@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_appicon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -35,12 +35,14 @@
             android:name=".Faculty"
             android:label="FACULTY" />
         <activity android:name=".ClassAdd" />
-        <activity android:name=".Attendence"></activity>
         <activity android:name=".Questions_add" />
         <activity android:name=".Questions_edit" />
         <activity android:name=".Quiz_edit" />
         <activity android:name=".Quiz_create" />
-        <activity android:name=".TestQuiz"></activity>
+        <activity android:name=".TestQuiz" />
+        <activity android:name=".MaterialUpload"></activity>
+        <activity android:name=".AttendanceSheet"></activity>
+
     </application>
 
 </manifest>

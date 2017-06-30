@@ -5,8 +5,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -24,10 +24,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class ClassData extends AppCompatActivity {
+public class ClassData extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    RecyclerView recyclerView;
-    RecyclerView.LayoutManager layoutManager;
     FloatingActionButton fab;
 
     ListView lv_classes;
@@ -53,21 +51,13 @@ public class ClassData extends AppCompatActivity {
         });
         fab.setBackgroundTintList(getResources().getColorStateList(R.color.colorPrimaryDark));
 
-        lv_classes = (ListView)findViewById(R.id.lv__classes);
+        lv_classes = (ListView)findViewById(R.id.lv_classes);
         if(arbranch!=null) {
             classAdapter = new ClassAdapter(ClassData.this, arbranch, arsemester, arsubject);
             lv_classes.setAdapter(classAdapter);
         }
+        lv_classes.setOnItemClickListener(this);
 
-        lv_classes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView subject=(TextView)view.findViewById(R.id.tv_sub);
-                Intent intent=new Intent(ClassData.this,Attendence.class);
-                intent.putExtra("subject",subject.getText().toString());
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -76,6 +66,21 @@ public class ClassData extends AppCompatActivity {
         super.onStart();
         ClassTask ct=new ClassTask();
         ct.execute();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        ViewGroup v = (ViewGroup) view;
+        TextView tv_sub = (TextView)findViewById(R.id.tv_sub);
+        TextView tv_branch = (TextView)findViewById(R.id.tv_branch);
+        TextView tv_sem = (TextView)findViewById(R.id.tv_sem);
+
+        Intent intent = new Intent(this,AttendanceSheet.class);
+        intent.putExtra("subject",tv_sub.getText().toString());
+        intent.putExtra("branch",tv_branch.getText().toString());
+        intent.putExtra("semester",tv_sem.getText().toString());
+        startActivity(intent);
+        finish();
     }
 
     private class ClassTask extends AsyncTask<Void, Void, Void>

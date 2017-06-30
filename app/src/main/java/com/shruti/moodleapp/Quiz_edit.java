@@ -132,7 +132,7 @@ public class Quiz_edit extends AppCompatActivity implements AdapterView.OnItemSe
             try
             {
                 DefaultHttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost("http://192.168.43.31/cms/quiznames.php");
+                HttpPost httpPost = new HttpPost("http://192.168.43.167/cms/quiznames.php");
                 HttpResponse httpResponse = httpClient.execute(httpPost);
                 myResponseString = EntityUtils.toString(httpResponse.getEntity());
             }
@@ -202,7 +202,7 @@ public class Quiz_edit extends AppCompatActivity implements AdapterView.OnItemSe
             String myResponseString = null;
             try
             {
-                URL url=new URL("http://192.168.43.31/cms/questions.php");
+                URL url=new URL("http://192.168.43.167/cms/questions.php");
                 HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);

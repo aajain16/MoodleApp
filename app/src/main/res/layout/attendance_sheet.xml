@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shruti.moodleapp.TestQuiz">
+    tools:context="com.shruti.moodleapp.AttendanceSheet">
 
     <ListView
-        android:id="@+id/lv_quiz"
-        android:layout_width="wrap_content"
-        android:layout_height="500dp"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/lv_atnsheet"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_test_submit"
-        android:layout_below="@+id/lv_quiz"
-        android:text="SUBMIT">
-    </Button>
+        android:id="@+id/submit_atndnce"
+        android:text="SUBMIT ATTENDANCE"
+        android:layout_below="@+id/lv_atnsheet"/>
+
 </RelativeLayout>

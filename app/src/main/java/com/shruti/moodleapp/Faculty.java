@@ -35,12 +35,18 @@ public class Faculty extends AppCompatActivity implements View.OnClickListener{
 
         attendence_take.setOnClickListener(this);
 
-        session.setid("IT1");
+        material_upload.setOnClickListener(this);
 
+        session.setid("IT1");
     }
 
     @Override
     public void onClick(View view) {
+        if (view == attendence_take)
+        {
+            Intent intent=new Intent(getApplicationContext(),ClassData.class);
+            startActivity(intent);
+        }
         if(view == quiz_new)
         {
 //            create_quiz();
@@ -52,12 +58,13 @@ public class Faculty extends AppCompatActivity implements View.OnClickListener{
             Intent i = new Intent(getApplicationContext(),Quiz_edit.class);
             startActivity(i);
         }
-        if (view == attendence_take)
+
+        if (view==material_upload)
+
         {
-            Intent intent=new Intent(Faculty.this,ClassData.class);
+            Intent intent=new Intent(Faculty.this,MaterialUpload.class);
             startActivity(intent);
         }
-
     }
 
 //    private void create_quiz() {
